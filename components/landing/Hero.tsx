@@ -21,7 +21,7 @@ export function Hero() {
             te ayuda a atender mejor a tus pacientes, protegiendo su información
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
-            Nuestra inteligencia artificial transcribe tus consultas, te ayuda a llenar el expediente y da seguimiento a tus pacientes por voz, todo dentro de los servidores seguros de tu hospital.
+            Nuestra inteligencia artificial transcribe tus consultas, te ayuda a llenar el expediente y da seguimiento a tus pacientes por voz.
           </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
             <a

@@ -50,15 +50,6 @@ const bento: Array<{
     illustrationClass: "size-16 text-primary",
   },
   {
-    title: "100% Privado",
-    subtitle: "Datos seguros",
-    body: "Instalación en tu hospital; datos sin salir a internet público.",
-    gridClass: "lg:col-span-1 lg:row-start-3 min-h-[140px] bg-card",
-    Illustration: IllustrationServer,
-    illustrationWrap: "rounded-2xl bg-primary/5 p-2.5 ring-1 ring-primary/10 transition-transform duration-500 group-hover:scale-110",
-    illustrationClass: "size-14 text-primary",
-  },
-  {
     title: "Hecho para ti",
     subtitle: "Tu propia plataforma",
     body: "Herramienta bajo control total de tu institución.",
@@ -99,7 +90,7 @@ export function FeaturesBento() {
           Automatización en tu infraestructura: menos carga administrativa y continuidad para el paciente.
         </p>
 
-        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-[repeat(3,auto)]">
+        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-[repeat(3,auto)]">
           {bento.map((item) => {
             const Ill = item.Illustration;
             return (

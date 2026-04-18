@@ -7,7 +7,7 @@ import { Footer } from "@/components/landing/Footer";
 export const metadata: Metadata = {
   title: `Documentación del proyecto | ${SITE.name}`,
   description:
-    "Problemática, solución, stack, monetización, impacto, desafíos y diferenciadores de Medly: IA clínica en infraestructura privada del hospital.",
+    "Problemática, solución, stack, monetización, impacto, desafíos y diferenciadores de Medly: IA clínica para hospitales y seguimiento del paciente.",
 };
 
 const toc = [
@@ -78,8 +78,8 @@ export default function AboutPage() {
                 <strong className="text-foreground">En resumen:</strong>{" "}
                 <span className="text-muted-foreground">
                   Medly es una plataforma de IA para hospitales que automatiza la consulta y el
-                  seguimiento del paciente, instalada en infraestructura privada para que los datos
-                  sensibles no salgan del control del hospital.
+                  seguimiento del paciente, con el foco en buenas prácticas de seguridad y en
+                  alinearse con la gobernanza de datos que las instituciones exigen.
                 </span>
               </blockquote>
 
@@ -107,10 +107,9 @@ export default function AboutPage() {
               </h2>
               <p>
                 Por eso proponemos <strong>Medly</strong>: una plataforma de IA para hospitales que{" "}
-                <strong>automatiza el ciclo de vida de la consulta y el seguimiento del paciente</strong>.
-                A diferencia de muchas apps comerciales, Medly se instala en la{" "}
-                <strong>infraestructura privada del hospital</strong>, de forma que la información
-                sensible permanece bajo su control institucional.
+                <strong>automatiza el ciclo de vida de la consulta y el seguimiento del paciente</strong>,
+                pensada para integrarse con la operación clínica y con procesos de seguridad y acceso
+                acordes a entornos hospitalarios.
               </p>
 
               <h3 className="text-xl font-bold mb-4 mt-6">Funciones principales</h3>
@@ -143,12 +142,12 @@ export default function AboutPage() {
               </h2>
               <p>
                 Herramientas de consultorio en la nube como <strong>Abridge</strong> o{" "}
-                <strong>Nabla</strong> son excelentes en su categoría, pero viven fuera del perímetro
-                del hospital. <strong>Medly es un activo del hospital</strong>: una inteligencia que
-                corre en <strong>sus propios servidores</strong>, que no solo ayuda a documentar la
-                visita, sino que <strong>acompaña al paciente en casa</strong> con una experiencia de
-                voz cercana y segura, fundamentada en el <strong>expediente real</strong>, no solo en
-                un modelo de lenguaje genérico.
+                <strong>Nabla</strong> son excelentes en su categoría, pero a menudo quedan centradas
+                en el momento de la visita. <strong>Medly amplía el valor al ecosistema del
+                hospital</strong>: no solo apoya a documentar la consulta, sino que{" "}
+                <strong>acompaña al paciente en casa</strong> con una experiencia de voz cercana,
+                fundamentada en el <strong>expediente y los protocolos del propio hospital</strong>,
+                no solo en un modelo de lenguaje genérico.
               </p>
 
               <h2 id="stack" className="text-2xl font-bold mb-4 mt-6">
@@ -156,7 +155,7 @@ export default function AboutPage() {
               </h2>
               <dl className="not-prose space-y-4">
                 <div className="rounded-xl border border-border/80 bg-card p-4 shadow-sm">
-                  <dt className="font-semibold text-foreground">IA de procesamiento (LLM privado + RAG)</dt>
+                  <dt className="font-semibold text-foreground">IA de procesamiento (LLM + RAG)</dt>
                   <dd className="mt-1 text-sm leading-relaxed text-muted-foreground">
                     Es el núcleo analítico. La arquitectura <strong>RAG</strong> (generación aumentada
                     por recuperación) busca que la IA responda apoyándose en la &quot;verdad&quot; del
@@ -169,6 +168,14 @@ export default function AboutPage() {
                     Actúa como <strong>memoria inteligente</strong>: expedientes representados como
                     vectores para que la IA localice información del paciente de forma rápida y
                     controlada.
+                  </dd>
+                </div>
+                <div className="rounded-xl border border-border/80 bg-card p-4 shadow-sm">
+                  <dt className="font-semibold text-foreground">Google Gemini</dt>
+                  <dd className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                    Modelo de lenguaje de <strong>Google</strong> que sintetiza y redacta respuestas
+                    a partir del contexto recuperado (RAG), con el objetivo de mantener el tono claro
+                    y acotado a la evidencia disponible.
                   </dd>
                 </div>
                 <div className="rounded-xl border border-border/80 bg-card p-4 shadow-sm">
@@ -227,6 +234,17 @@ export default function AboutPage() {
                 salud de quienes cuidan y la calidad percibida de la atención.
               </p>
 
+              <h3 className="text-xl font-bold mb-4 mt-6">Trabajo a futuro: despliegue en el hospital</h3>
+              <p>
+                En la hoja de ruta está ofrecer un modelo en el que Medly pueda{" "}
+                <strong>hospedarse en la infraestructura del hospital</strong> (por ejemplo on-prem
+                o nube privada del centro), para instituciones que prioricen que los datos sensibles
+                permanezcan bajo su perímetro y su control operativo. Eso implica decisiones de
+                arquitectura, dimensionamiento y, cuando aplique,{" "}
+                <strong>modelos locales u open source</strong> para reducir dependencia de APIs
+                externas bajo marcos regulatorios más estrictos.
+              </p>
+
               <h2 id="desafios" className="text-2xl font-bold mb-4 mt-6">
                 <span className="text-primary">7.</span> Desafíos y retos
               </h2>
@@ -246,9 +264,9 @@ export default function AboutPage() {
                   clave para que Medly sea útil desde el primer día.
                 </li>
                 <li>
-                  <strong>Latencia en servidores privados:</strong> sin depender por completo de la
-                  elasticidad de nube pública, el hospital debe dimensionar hardware adecuado para
-                  modelos de lenguaje y búsqueda vectorial sin tiempos de respuesta inaceptables.
+                  <strong>Latencia y rendimiento clínico:</strong> el uso de RAG, modelos de lenguaje
+                  y búsqueda vectorial debe mantener tiempos de respuesta aceptables en producción,
+                  con monitoreo y capacidad acorde al volumen de consultas.
                 </li>
               </ol>
 
@@ -269,8 +287,8 @@ export default function AboutPage() {
               <h3 className="text-xl font-bold mb-4 mt-6">7.3 Retos legales y regulatorios</h3>
               <ol>
                 <li>
-                  <strong>Soberanía de datos:</strong> aun con despliegue local, el uso de APIs externas
-                  (por ejemplo Gemini, ElevenLabs) exige demostrar por auditoría que lo transmitido está{" "}
+                  <strong>Soberanía de datos:</strong> el uso de APIs externas (por ejemplo Gemini,
+                  ElevenLabs) exige demostrar por auditoría que lo transmitido está{" "}
                   <strong>anonimizado</strong> o amparado en acuerdos que prohíban el entrenamiento con
                   esos datos.
                 </li>
@@ -319,9 +337,10 @@ export default function AboutPage() {
                   geriatría o diabetes) para afinar el RAG antes de un despliegue hospitalario amplio.
                 </li>
                 <li>
-                  <strong>Modo offline / soberanía total (evolutivo):</strong> valorar modelos open
-                  source (por ejemplo familias tipo Llama) en GPUs del hospital para minimizar o eliminar
-                  el envío de datos sensibles a APIs de terceros cuando el contexto regulatorio lo exija.
+                  <strong>Evolución hacia mayor control institucional:</strong> alinear producto y
+                  contratos con la hoja de ruta de despliegue en perímetro del hospital (véase trabajo
+                  a futuro) para que la mitigación técnica y la narrativa legal coincidan con lo que
+                  cada centro pueda adoptar.
                 </li>
               </ul>
 
