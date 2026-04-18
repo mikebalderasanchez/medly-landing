@@ -215,14 +215,8 @@ export default function AboutPage() {
               <h2 id="impacto" className="text-2xl font-bold mb-4 mt-6">
                 <span className="text-primary">6.</span> Impacto y trabajo a futuro
               </h2>
-              <p className="rounded-lg border-l-4 border-primary/40 bg-surface/80 py-2 pl-4 not-italic text-muted-foreground">
-                <span className="font-semibold text-foreground">Nota del equipo — Anita:</span> se busca
-                optimizar el trabajo médico automatizando la captura de datos durante la consulta,
-                reduciendo tareas administrativas y liberando tiempo para la atención directa al
-                paciente.
-              </p>
               <p>
-                También se pretende ofrecer a los pacientes una herramienta para resolver dudas sobre
+                Se pretende ofrecer a los pacientes una herramienta para resolver dudas sobre
                 sus recetas <strong>sin tener que contactar al hospital</strong> por cada duda
                 repetitiva. Eso mejora la experiencia del paciente y puede aliviar la carga operativa
                 del personal.

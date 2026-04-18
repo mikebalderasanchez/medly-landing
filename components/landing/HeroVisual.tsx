@@ -51,7 +51,7 @@ export function HeroVisual() {
         </div>
         <div className="mr-8 flex justify-end sm:mr-12">
           <div className="rounded-2xl border border-primary/20 bg-gradient-to-br from-primary to-primary-hover px-4 py-2.5 text-xs font-semibold text-white shadow-lg shadow-primary/25">
-            Guardarraíles activos
+            Recetas y expedientes guardados
           </div>
         </div>
       </div>
